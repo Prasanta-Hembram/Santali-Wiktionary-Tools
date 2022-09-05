@@ -1,19 +1,25 @@
+<!-- https://www.w3schools.com/HOWTO/howto_html_include.asp -->
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="UTF-8"> 
+    <meta charset="UTF-8">
     <title>ᱥᱟᱱᱛᱟᱲᱤ ᱣᱤᱠᱤᱢᱩᱨᱟᱹᱭ ᱥᱮᱱᱫᱽᱨᱟ</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-<form name="basicForm" onSubmit="return basicSearch();">
-ᱣᱤᱠᱤᱢᱩᱨᱟᱹᱭ ᱟᱹᱲᱟᱹ ᱥᱮᱱᱫᱽᱨᱟ ᱢᱮ: 
- <input type="text" name="searchterms">
- <input type="submit" name="SearchSubmit" value="Search">
-</form><br>
+    <form name="basicForm" onSubmit="return basicSearch();">
+        ᱣᱤᱠᱤᱢᱩᱨᱟᱹᱭ ᱟᱹᱲᱟᱹ ᱥᱮᱱᱫᱽᱨᱟᱭ ᱢᱮ:
+        <input type="text" name="searchterms" list="santaliwt">
+        <!-- your datalist -->
+        <datalist id="santaliwt">
+        </datalist>
+         <!-- your datalist -->
+        <input type="submit" name="SearchSubmit" value="Search">
+    </form><br>
 
-
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>

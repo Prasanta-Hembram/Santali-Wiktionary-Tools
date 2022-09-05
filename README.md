@@ -1,1 +1,2 @@
-Some online tools to speedup Santali Wikitionary Incubator editing.
+ᱣᱤᱠᱤᱢᱩᱨᱟᱹᱭ ᱥᱟᱯᱲᱟᱣ ᱦᱟᱹᱛᱤᱭᱟᱨ ᱾
+Online Santali Wikitionary Incubator editing tool.
