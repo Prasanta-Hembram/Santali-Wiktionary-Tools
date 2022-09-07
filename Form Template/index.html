@@ -1,0 +1,212 @@
+<!-- https://stackoverflow.com/questions/20508163/javascript-print-multiple-form-inputs-to-a-textarea -->
+<!-- https://stackoverflow.com/questions/37658524/copying-text-of-textarea-in-clipboard-when-button-is-clicked -->
+<!-- https://www.geeksforgeeks.org/build-a-survey-form-using-html-and-css/ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Template</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="homei">
+    <a href="../index.html">Home</a>
+</div>
+  <form name="sources" id="form">
+
+      <!-- Below is Word -->
+
+    <div class="form-control">
+      <label for="name" id="label-name">
+				Word (mandatory (eg. ᱥᱟᱱᱛᱟᱲᱤ))
+			</label>
+
+
+      <input type="text"
+      id="Sword"
+      placeholder="Enter a Word" />
+    </div>
+
+  <!-- Below is Meaning -->
+
+    <div class="form-control">
+      <label for="name" id="label-name">
+				Meaning (mandatory)
+			</label>
+    
+
+      <input type="text"
+      id="Smeaning"
+      placeholder="Enter a Meaning" />
+    </div>
+
+ <!-- Below is Audio -->
+
+
+    <div class="form-control">
+
+      <label for="name" id="label-name">
+				Audio link (optional)
+			</label>
+
+     
+      <input type="text"
+      id="Saudio"
+      placeholder="Audio link" />
+
+    </div>
+
+
+<!-- English word -->
+
+
+    <div class="form-control">
+   
+      <label for="name" id="label-name">
+				English (mandatory - one word only)
+			</label>
+
+      <input type="text"
+      id="english"
+      placeholder="English Word" />
+
+    </div>
+
+<!-- Odia word -->
+
+    <div class="form-control">
+
+      <label for="name" id="label-name">
+				Odia Word(optional)
+			</label>
+
+      <input type="text"
+      id="odia"
+      placeholder="Odia Word" />
+    </div>
+
+<!-- Hindi word -->
+
+    <div class="form-control">
+      <label for="name" id="label-name">
+				Hindi Word(optional)
+			</label>
+
+      <input type="text"
+      id="hindi"
+      placeholder="Hindi Word" />
+
+    </div>
+
+
+<!-- Bangla word -->
+
+    
+    <div class="form-control">
+      <label for="name" id="label-name">
+				Bangla Word(optional)
+			</label>
+
+      <input type="text"
+      id="bangla"
+      placeholder="bangla Word" />
+    </div>
+
+    
+<!-- Assamese word -->
+
+    <div class="form-control">
+    <label for="name" id="label-name">
+      Assamese Word(optional)
+    </label>
+
+    <input type="text"
+    id="assamese"
+    placeholder="assamese Word" />
+    </div>
+
+ <!-- First Character -->   
+
+    <div class="form-control">
+    <label for="name" id="label-name">
+      First Character(mandatory - (eg. first character for ᱥᱟᱱᱛᱟᱲᱤ would be ᱥ)
+    </label>
+
+    <input type="text"
+    id="firstC"
+    placeholder="First Character" />
+    </div>
+
+    </br></br>
+
+    <div class="form-control-inputB">
+      <input type="button" value="Create" onclick="writeCode();"  />
+    <!-- <input type="button" value="Create" onclick="writeCode();" /> -->
+    <!-- <input type="button" value="Cite another article!" onClick="window.location.reload()" /> -->
+    </div>
+  </br>
+
+<!-- multi-line text input control -->
+
+    <div class="form-control">
+			<label for="comment">
+				Your Text
+			</label>
+
+			<!-- multi-line text input control -->
+			<textarea name="comment" id="outputForm"
+				placeholder="Press Generate Button ">
+			</textarea>
+
+
+
+
+    <!-- <textarea style="width:600px;height:100px;" name="outputForm2" id="outputForm"></textarea> -->
+    </br>
+    <div class="form-control-inputB">
+    <input type="button" value="copy" onclick="copy()"/>
+    </div>
+  </form>
+
+
+  <script>
+    function writeCode() {
+      var Sword = document.getElementById('Sword').value,
+        Smeaning = document.getElementById('Smeaning').value,
+        Saudio = document.getElementById('Saudio').value,
+        english = document.getElementById('english').value,
+        odia = document.getElementById('odia').value,
+        hindi = document.getElementById('hindi').value,
+        bangla = document.getElementById('bangla').value,
+        assamese = document.getElementById('assamese').value,
+        firstC = document.getElementById('firstC').value,
+        // outputValue = 'something\n' + '<a href="' + lnk1 + '"target="_blank"><span style="color: #2200fc; font-size: xx-small;">' + src1 + '</span></a>' + ', ' + '<a href="' + lnk2 + '"target="_blank"><span style="color: #2200fc; font-size: xx-small;">' + src2 + '</span></a>';
+        outputValue = '== ᱥᱟᱱᱛᱟᱲᱤ ==\n=== ᱢᱮᱱᱮᱛ ===\n' + Smeaning + '\n' + '=== ᱥᱟᱰᱮ ===\n' + Saudio + '\n' + '=== ᱛᱚᱨᱡᱚᱢᱟ ===' + '\n' + '{{Wt/sat/trans-top|' + Sword + '}}' + '\n' + '*English: [[wikt:en:|' + english + ']]'  + '\n' + '* ଓଡ଼ିଆ: [[wikt:or:|' + odia + ']]' + '\n' + '* हिंदी: [[wikt:hi:|' + hindi + ']]' + '\n' + '* বাংলা: [[wikt:bn:|' + bangla + ']]' + '\n' + '* অসমীয়া: [[wikt:as:|' + assamese + ']]' + '\n' + '{{Wt/sat/trans-bottom}}' + '\n' + '=== ᱵᱟᱹᱲᱛᱤ ᱡᱟᱱᱟᱲ ===' + '\n' + '{{Wt/sat/ᱣᱤᱠᱤᱯᱤᱰᱤᱭᱟ}}' + '\n' + '=== ᱥᱟᱹᱠᱷᱭᱟᱹᱛ ===' + '\n' + '*Campbell, A.; Macphail, R.M. (1984). Campbell\'s English-Santali Dictionary. Eastern Books. ISBN 978-0-8364-1137-9.' + '\n' + '*Campbell, A. (1899). A Santali-English dictionary. Santal Mission Press.' + '\n' + '*Mrs. Maina Tudu (Hansdah). (2016) SANTALI DICTIONARY, Olchiki-Olchiki-English script. ISBN 978-93-5267-534-0' + '\n' +  '*P.O. BODDING. SANTALI DICTIONARY (1929)' + '\n' + '[[Category:Wt/sat/' + firstC + ']]' + '\n' + '[[Category:Wt/sat]]' + '\n' + '[[Category:Wt/sat/ᱟᱹᱰᱤ ᱠᱷᱟᱴᱚ ᱚᱞ ᱥᱟᱦᱴᱟ]]' + '\n' + '[[Category:Wt/sat/ᱢᱮᱱᱮᱛ ᱵᱟᱝ ᱥᱟᱹᱛ ᱟᱠᱟᱱᱟ]]' + '\n' + '[[Category:Wt/sat/ᱥᱟᱰᱮ ᱵᱟᱝ ᱥᱟᱹᱛ ᱟᱠᱟᱱᱟ]]' + '\n' + '[[Category:Wt/sat/ᱛᱚᱨᱡᱚᱢᱟ ᱵᱟᱝ ᱥᱟᱹᱛ ᱟᱠᱟᱱᱟ]]' + '\n' + '[[Category:Wt/sat/ᱪᱤᱛᱟᱹᱨ ᱵᱟᱝ ᱥᱟᱹᱛ ᱟᱠᱟᱱᱟ]]' + '\n' + '[[Category:Wt/sat/ᱯᱷᱚᱨᱢᱟᱴ ᱵᱟᱝ ᱥᱟᱹᱛ ᱟᱠᱟᱱᱟ]]' + '\n' + '[[Category:Wt/sat/ᱜᱮᱯ ᱵᱟᱝ ᱥᱟᱹᱛ ᱟᱠᱟᱱᱟ]]' + '\n' + '[[Category:Wt/sat/ᱛᱷᱚᱠ ᱵᱟᱝ ᱥᱟᱹᱛ ᱟᱠᱟᱱᱟ]]' + '\n' +  '[[Category:Wt/sat/ᱥᱚᱢᱟᱱ ᱟᱹᱲᱟᱹ ᱵᱟᱝ ᱥᱟᱹᱛ ᱟᱠᱟᱱᱟ]]' + '\n' + '[[Category:ᱩᱞᱴᱟᱹ ᱟᱹᱲᱟᱹ ᱵᱟᱝ ᱥᱟᱹᱛ ᱟᱠᱟᱱᱟ]]' + '\n' + '[[Category:Wt/sat/ᱪᱚᱨᱚᱠ ᱥᱟᱦᱴᱟ🏆 ᱓]]' + '\n' + '[[Category:Wt/sat/SWT ᱛᱮ ᱥᱟᱦᱴᱟ ᱛᱮᱭᱟᱨ ᱦᱩᱭ ᱠᱟᱱᱟ]]';
+
+        
+    //   if (src3.length != 0 && lnk3.length != 0) {
+    //     outputValue += ', ' + '<a href="' + lnk3 + '"target="_blank"><span style="color: #2200fc; font-size: xx-small;">' + src3 + '</span></a>';
+    //   }
+      document.getElementById('outputForm').value = outputValue;
+
+    }
+
+// copy button
+
+function copy() {
+  let textarea = document.getElementById("outputForm");
+  textarea.select();
+  document.execCommand("copy");
+}
+
+
+  </script>
+
+
+</body>
+
+</html>

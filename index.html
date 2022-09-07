@@ -4,22 +4,63 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>ᱥᱟᱱᱛᱟᱲᱤ ᱣᱤᱠᱤᱢᱩᱨᱟᱹᱭ ᱥᱮᱱᱫᱽᱨᱟ</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
     <link rel="stylesheet" href="styles.css">
+
 </head>
+<title>ᱥᱮᱱᱫᱽᱨᱟᱭ ᱢᱮ</title>
 
 <body>
-    <form name="basicForm" onSubmit="return basicSearch();">
-        ᱣᱤᱠᱤᱢᱩᱨᱟᱹᱭ ᱟᱹᱲᱟᱹ ᱥᱮᱱᱫᱽᱨᱟᱭ ᱢᱮ:
-        <input type="text" name="searchterms" list="santaliwt">
-        <!-- your datalist -->
-        <datalist id="santaliwt">
-        </datalist>
-         <!-- your datalist -->
-        <input type="submit" name="SearchSubmit" value="Search">
-    </form><br>
+
+
+        <div class="dropdown">
+            <button onclick="show_hide()" class="buttonD">L10N</button>
+            <!-- dropdown list items will show when we click the drop button -->
+            <div id="list-items">
+                <a href="check if page exists or not/index.html">Check Word (If already present)</a>
+                <a href="Page Template/index.html">Interactive Form Template</a>
+                <a href="Form Template/index.html">Form Template</a>
+
+            </div>
+        </div>
+
+
+        <form name="basicForm" onSubmit="return basicSearch();">
+            <div class="form-control">
+                <label for="formGroupExampleInput" id="label-name">
+                    SWIncubator Word
+                </label>
+    
+                <!-- Input Type Text -->
+                <input type="text"
+                name="searchterms"
+                list="santaliwt" 
+                    id="name"
+                    class="form-control"
+                    placeholder="Enter your name" />
+
+                <!-- your datalist -->
+                <datalist id="santaliwt">
+                </datalist>
+                <!-- your datalist -->
+                
+            </div>
+            <div>
+            <button type="submit" name="SearchSubmit" value="Search" class="submits">ᱥᱮᱱᱫᱽᱨᱟ</button>
+            </div>
+        </form>
+
+
+
+
+
 
     <script src="script.js"></script>
+    <!-- JavaScript Bundle with Popper -->
+
 </body>
 
 </html>
