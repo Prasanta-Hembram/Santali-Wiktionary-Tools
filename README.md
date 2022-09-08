@@ -1,2 +1,2 @@
 ᱣᱤᱠᱤᱢᱩᱨᱟᱹᱭ ᱥᱟᱯᱲᱟᱣ ᱦᱟᱹᱛᱤᱭᱟᱨ ᱾
-Online Santali Wikitionary Incubator editing tool.
+Online Santali Wiktionary Incubator editing tool.
