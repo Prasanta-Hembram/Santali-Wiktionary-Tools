@@ -1,6 +1,7 @@
 <!-- https://stackoverflow.com/questions/20508163/javascript-print-multiple-form-inputs-to-a-textarea -->
 <!-- https://stackoverflow.com/questions/37658524/copying-text-of-textarea-in-clipboard-when-button-is-clicked -->
 <!-- https://www.geeksforgeeks.org/build-a-survey-form-using-html-and-css/ -->
+<!-- Reset code: http://pull.javascript-coder.com/javascript-form/javascript-reset-form/ -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -169,9 +170,12 @@
     </br>
     <div class="form-control-inputB">
     <input type="button" value="copy" onclick="copy()"/>
+    <br>
+    <input type="button" name="reset_form" value="Reset Form" onclick="this.form.reset();">
     </div>
   </form>
 
+ 
 
   <script>
     function writeCode() {

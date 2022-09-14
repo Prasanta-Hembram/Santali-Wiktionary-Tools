@@ -31,12 +31,12 @@ form {
 		select, textarea */
 .form-control input,
 .form-control select {
-    border: 1px solid #777;
+    border: 1.7px solid #777;
     border-radius: 2px;
     font-family: inherit;
-    padding: 10px;
+    padding: 12px;
     display: block;
-    width: 95%;
+    width: 90%;
 }
 
 /* Styling form-control Radio
@@ -81,7 +81,7 @@ button {
     padding: 10px;
     display: block;
     width: 95%;
-    height: 100px;
+    height: 300px;
 }
 
 .homei {
@@ -90,4 +90,15 @@ button {
     background-color: bisque;
     margin-bottom: 0.1rem;
     font-size: 1.2rem;
+  }
+
+  .form-control-reset input{
+    background-color: #05c46b;
+    border: 1px solid rgb(252, 242, 242);
+    border-radius: 2px;
+    font-family: inherit;
+    padding: 10px;
+    display: block;
+    width: 40%;
+    margin-left: 30%;
   }
