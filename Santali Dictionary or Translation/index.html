@@ -1,0 +1,250 @@
+<!-- https://stackoverflow.com/questions/30241407/how-to-pass-input-field-values-as-a-url-query-string-that-will-be-opened-on-clic -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+<div class="homei">
+    <a href="../index.html">Home</a>
+</div>
+
+<h2>Search word/Translation</h2>
+<p>Please use any one of these tools at a time to avoid mass call.</p>
+
+<p>mymemory</p>
+<div class="container">
+    <div class="wrapper">
+      <div class="text-input">
+        <textarea spellcheck="false" id ="english0" class="from-text" placeholder="Enter text"></textarea>
+        <textarea spellcheck="false" id ="santali0"  class="to-text" placeholder="Translation"></textarea>
+      </div>
+      <ul class="controls">
+        <li class="row from">
+          <div class="icons">
+            <i id="from" class="fas fa-volume-up"></i>
+            <i id="from" class="fas fa-copy"></i>
+          </div>
+          <select></select>
+        </li>
+        <li class="exchange"><i class="fas fa-exchange-alt">↔️</i></li>
+        <li class="row to">
+          <select></select>
+          <div class="icons">
+            <i id="to" class="fas fa-volume-up"></i>
+            <i id="to" class="fas fa-copy"></i>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <button>Translate Text</button>
+  </div>
+
+<br>
+
+<p>Glosbe</b>
+<!-- https://stackoverflow.com/questions/34128361/appending-form-input-value-to-action-url-as-path -->
+<!-- https://beta.apertium.org/apy -->
+<form id="Glosbe_form" method="GET" target="_blank"  _lpchecked="1" onsubmit="GlsobeFunction()">
+    <textarea type="text" id="segment" placeholder="source language" name="1">en</textarea>
+    <textarea type="text" id="translation" placeholder="target" name="2">sat</textarea>
+  <textarea type="text" id="translation" name="input"/>Cow</textarea>
+  <button type="submit" id="submit">Submit</button>
+</form>
+
+
+<br>
+
+
+<p>OmegaWiki</p>
+<form method="GET" target="_blank" action="https://www.omegawiki.org/" _lpchecked="1">
+  <textarea type="text" id="segment" placeholder="source language" name="search">ᱩᱞ</textarea>
+  <!-- <textarea type="text" id="translation" name="text"/>Your text</textarea> -->
+  <button type="submit" id="submit">Submit</button>
+</form>
+
+
+<p>English Wiktionary</p>
+<form method="GET" target="_blank" action="https://en.wiktionary.org/" _lpchecked="1">
+  <textarea type="text" id="segment" placeholder="source language" name="search">ᱩᱞ</textarea>
+  <!-- <textarea type="text" id="translation" name="text"/>Your text</textarea> -->
+  <button type="submit" id="submit">Submit</button>
+</form>
+
+<br>
+
+<p>Taking Dictionary</p>
+<form method="GET" target="_blank" action="https://talkingdictionary.swarthmore.edu/santali/" _lpchecked="1">
+  <textarea type="text" id="segment" placeholder="query" name="q">bar</textarea>
+  <!-- <textarea type="text" id="translation" name="text"/>Your text</textarea> -->
+  <button type="submit" id="submit">Submit</button>
+</form>
+
+
+<br>
+
+<p>Apertium</b> . Use with caution</p>
+<!-- https://beta.apertium.org/apy -->
+<form method="GET" target="_blank" action="https://beta.apertium.org/" _lpchecked="1">
+  <textarea type="text" id="segment" placeholder="source language and target" name="dir">eng-sat</textarea>
+  <textarea type="text" id="translation" name="q"/>Cow</textarea>
+  <button type="submit" id="submit">Submit</button>
+</form>
+
+ <br>
+
+ <h2>Santali Not supported Yet</h2>
+ <p>Only search for meaning and translations using supported language....</p>
+
+ <p>Google Translate</p>
+  <form method="GET" target="_blank" action="https://translate.google.co.in/?" _lpchecked="1">
+    <textarea type="text" id="segment" placeholder="source language" name="sl">auto</textarea>
+    <textarea type="text" id="translation" placeholder="target" name="tl">hi</textarea>
+    <textarea type="text" id="translation" name="text"/>Your text</textarea>
+    <button type="submit" id="submit">Submit</button>
+ </form>
+
+ <p>Bing</p>
+ <form method="GET" target="_blank" action="https://www.bing.com/translator" _lpchecked="1">
+   <textarea type="text" id="segment" placeholder="source language" name="sl">auto</textarea>
+   <textarea type="text" id="translation" placeholder="target" name="tl">hi</textarea>
+   <textarea type="text" id="translation" name="text"/>Your text</textarea>
+   <button type="submit" id="submit">Submit</button>
+</form>
+
+
+<p>yandex</p>
+<form method="GET" target="_blank" action="https://translate.yandex.com/" _lpchecked="1">
+  <textarea type="text" id="segment" placeholder="source language" name="lang">en-hi</textarea>
+  <textarea type="text" id="translation" name="text"/>Your text</textarea>
+  <button type="submit" id="submit">Submit</button>
+</form>
+
+
+
+<h2>Contribution</h2>
+<p>Help by contributing your translations to mymemory....</p>
+
+<p>(Public Contribution)After clicking on <b>submit</b> you will get a new tab with a messege <b>{"responseData":"OK","responseStatus":200,"responseDetails":[6409]}</b>, which means your submission is successful. Use with caution</p>
+  <form method="GET" target="_blank" action="https://api.mymemory.translated.net/set?" _lpchecked="1">
+    <textarea type="text" id="segment" placeholder="English" name="seg"></textarea>
+    <textarea type="text" id="translation" placeholder="ᱥᱟᱱᱛᱟᱲᱤ" name="tra"></textarea>
+    <textarea type="text" id="translation" readonly name="langpair"/>en-US|sat-IN</textarea>
+    <button type="submit" id="submit">Submit</button>
+ </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <script src="countries.js"></script>
+ <script>
+
+const fromText = document.querySelector(".from-text"),
+toText = document.querySelector(".to-text"),
+exchageIcon = document.querySelector(".exchange"),
+selectTag = document.querySelectorAll("select"),
+icons = document.querySelectorAll(".row i");
+translateBtn = document.querySelector("button"),
+
+selectTag.forEach((tag, id) => {
+ for (let country_code in countries) {
+     let selected = id == 0 ? country_code == "en-US" ? "selected" : "" : country_code == "sat-IN" ? "selected" : "";
+     let option = `<option ${selected} value="${country_code}">${countries[country_code]}</option>`;
+     tag.insertAdjacentHTML("beforeend", option);
+ }
+});
+
+exchageIcon.addEventListener("click", () => {
+ let tempText = fromText.value,
+ tempLang = selectTag[0].value;
+ fromText.value = toText.value;
+ toText.value = tempText;
+ selectTag[0].value = selectTag[1].value;
+ selectTag[1].value = tempLang;
+});
+
+fromText.addEventListener("keyup", () => {
+ if(!fromText.value) {
+     toText.value = "";
+ }
+});
+
+translateBtn.addEventListener("click", () => {
+ let text = fromText.value.trim(),
+ translateFrom = selectTag[0].value,
+ translateTo = selectTag[1].value;
+ if(!text) return;
+ toText.setAttribute("placeholder", "Translating...");
+ let apiUrl = `https://api.mymemory.translated.net/get?q=${text}&langpair=${translateFrom}|${translateTo}`;
+ fetch(apiUrl).then(res => res.json()).then(data => {
+     toText.value = data.responseData.translatedText;
+     data.matches.forEach(data => {
+         if(data.id === 0) {
+             toText.value = data.translation;
+         }
+     });
+     toText.setAttribute("placeholder", "Translation");
+ });
+});
+
+icons.forEach(icon => {
+ icon.addEventListener("click", ({target}) => {
+     if(!fromText.value || !toText.value) return;
+     if(target.classList.contains("fa-copy")) {
+         if(target.id == "from") {
+             navigator.clipboard.writeText(fromText.value);
+         } else {
+             navigator.clipboard.writeText(toText.value);
+         }
+     } else {
+         let utterance;
+         if(target.id == "from") {
+             utterance = new SpeechSynthesisUtterance(fromText.value);
+             utterance.lang = selectTag[0].value;
+         } else {
+             utterance = new SpeechSynthesisUtterance(toText.value);
+             utterance.lang = selectTag[1].value;
+         }
+         speechSynthesis.speak(utterance);
+     }
+ });
+});
+
+ </script>
+
+<script>
+    function GlsobeFunction(){
+    var action_src = "https://glosbe.com/"+ document.getElementsByName("1")[0].value + "/" + document.getElementsByName("2")[0].value + "/" + document.getElementsByName("input")[0].value;
+    var your_form = document.getElementById('Glosbe_form');
+    your_form.action = action_src;
+}
+
+
+
+</script>
+
+
+</body>
+</html>
+
+
+<!-- https://api.mymemory.translated.net/set?seg=Hello World!&tra=Ciao Mondo!&langpair=en| -->
