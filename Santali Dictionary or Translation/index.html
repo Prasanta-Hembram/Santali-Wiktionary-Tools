@@ -7,6 +7,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
 
@@ -15,9 +17,9 @@
 </div>
 
 <h2>Search word/Translation</h2>
-<p>Please use any one of these tools at a time to avoid mass call.</p>
+<p id="p1">Please use any one of these tools at a time to avoid mass call.</p>
 
-<p>mymemory</p>
+<p id="p2">mymemory</p>
 <div class="container">
     <div class="wrapper">
       <div class="text-input">
@@ -47,7 +49,7 @@
 
 <br>
 
-<p>Glosbe</b>
+<p id="p3">Glosbe</b>
 <!-- https://stackoverflow.com/questions/34128361/appending-form-input-value-to-action-url-as-path -->
 <!-- https://beta.apertium.org/apy -->
 <form id="Glosbe_form" method="GET" target="_blank"  _lpchecked="1" onsubmit="GlsobeFunction()">
@@ -61,7 +63,7 @@
 <br>
 
 
-<p>OmegaWiki</p>
+<p id="p4">OmegaWiki</p>
 <form method="GET" target="_blank" action="https://www.omegawiki.org/" _lpchecked="1">
   <textarea type="text" id="segment" placeholder="source language" name="search">ᱩᱞ</textarea>
   <!-- <textarea type="text" id="translation" name="text"/>Your text</textarea> -->
@@ -69,7 +71,7 @@
 </form>
 
 
-<p>English Wiktionary</p>
+<p id="p5">English Wiktionary</p>
 <form method="GET" target="_blank" action="https://en.wiktionary.org/" _lpchecked="1">
   <textarea type="text" id="segment" placeholder="source language" name="search">ᱩᱞ</textarea>
   <!-- <textarea type="text" id="translation" name="text"/>Your text</textarea> -->
@@ -78,7 +80,7 @@
 
 <br>
 
-<p>Taking Dictionary</p>
+<p id="p6">Taking Dictionary</p>
 <form method="GET" target="_blank" action="https://talkingdictionary.swarthmore.edu/santali/" _lpchecked="1">
   <textarea type="text" id="segment" placeholder="query" name="q">bar</textarea>
   <!-- <textarea type="text" id="translation" name="text"/>Your text</textarea> -->
@@ -88,7 +90,7 @@
 
 <br>
 
-<p>Apertium</b> . Use with caution</p>
+<p id="p7">Apertium</b> . Use with caution</p>
 <!-- https://beta.apertium.org/apy -->
 <form method="GET" target="_blank" action="https://beta.apertium.org/" _lpchecked="1">
   <textarea type="text" id="segment" placeholder="source language and target" name="dir">eng-sat</textarea>
@@ -99,9 +101,9 @@
  <br>
 
  <h2>Santali Not supported Yet</h2>
- <p>Only search for meaning and translations using supported language....</p>
+ <p id="p8">Only search for meaning and translations using supported language....</p>
 
- <p>Google Translate</p>
+ <p id="p9">Google Translate</p>
   <form method="GET" target="_blank" action="https://translate.google.co.in/?" _lpchecked="1">
     <textarea type="text" id="segment" placeholder="source language" name="sl">auto</textarea>
     <textarea type="text" id="translation" placeholder="target" name="tl">hi</textarea>
@@ -109,7 +111,7 @@
     <button type="submit" id="submit">Submit</button>
  </form>
 
- <p>Bing</p>
+ <p id="p10">Bing</p>
  <form method="GET" target="_blank" action="https://www.bing.com/translator" _lpchecked="1">
    <textarea type="text" id="segment" placeholder="source language" name="sl">auto</textarea>
    <textarea type="text" id="translation" placeholder="target" name="tl">hi</textarea>
@@ -118,7 +120,7 @@
 </form>
 
 
-<p>yandex</p>
+<p id="p11">yandex</p>
 <form method="GET" target="_blank" action="https://translate.yandex.com/" _lpchecked="1">
   <textarea type="text" id="segment" placeholder="source language" name="lang">en-hi</textarea>
   <textarea type="text" id="translation" name="text"/>Your text</textarea>
@@ -128,9 +130,11 @@
 
 
 <h2>Contribution</h2>
+
 <p>Help by contributing your translations to mymemory....</p>
 English-Santali<br>
 <p>(Public Contribution)After clicking on <b>submit</b> you will get a new tab with a messege <b>{"responseData":"OK","responseStatus":200,"responseDetails":[6409]}</b>, which means your submission is successful. Use with caution</p>
+
   <form method="GET" target="_blank" action="https://api.mymemory.translated.net/set?" _lpchecked="1">
     <textarea type="text" id="segment" placeholder="English" name="seg"></textarea>
     <textarea type="text" id="translation" placeholder="ᱥᱟᱱᱛᱟᱲᱤ" name="tra"></textarea>
@@ -265,3 +269,8 @@ icons.forEach(icon => {
 
 
 <!-- https://api.mymemory.translated.net/set?seg=Hello World!&tra=Ciao Mondo!&langpair=en| -->
+//total 13 paragraph id present i.e 1 to 13
+
+
+Background photo (img.jpg) by Irina Iriser from Pexels:
+https://www.pexels.com/photo/close-up-photography-of-pink-flowers-1408221/

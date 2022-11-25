@@ -1,0 +1,26 @@
+body{
+    border: 7px solid red;
+    border-style: ridge groove ridge groove;
+    padding: 7px;
+    box-sizing: border-box;
+    background: url(img.jpg) no-repeat scroll
+    center;
+    color: lightgreen;
+    text-align: center;
+    word-spacing: 1px;
+    text-transform: capitalize;
+}
+
+h2{
+    text-decoration: underline;
+    text-shadow: 4px 4px 6px orange;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: oblique;
+    font-weight: lighter;
+    font-variant: small-caps;
+    font-size: xx-large;
+}
+
+button:hover{
+    color: royalblue;
+}
