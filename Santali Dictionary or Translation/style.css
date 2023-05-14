@@ -3,18 +3,20 @@ body{
     border-style: ridge groove ridge groove;
     padding: 7px;
     box-sizing: border-box;
-    background: url(img.jpg) no-repeat scroll
-    center;
-    color: lightgreen;
+    background: url(leaf.jpg) repeat scroll;
+    color: rgb(0, 252, 105);
     text-align: center;
     word-spacing: 1px;
     text-transform: capitalize;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-weight: 300;
 }
 
 h2{
     text-decoration: underline;
     text-shadow: 4px 4px 6px orange;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', Times, serif;
     font-style: oblique;
     font-weight: lighter;
     font-variant: small-caps;
@@ -23,4 +25,96 @@ h2{
 
 button:hover{
     color: royalblue;
+}
+
+#english0, #santali0{
+    width: 600px;
+    height: 300px;
+    resize: none;
+    border: solid;
+    border-radius: 10px;
+    padding: 9px 9px 9px 9px;
+    font-size: x-large;
+    font-family: sans-serif,monospace,arial;
+}
+
+textarea{
+    width: 200px;
+    height: 100px;
+    resize: none;
+    opacity: 90%;
+}
+
+#translation1{
+    width: 90px;
+    height: 10px;
+    resize: none;
+}
+
+#segment, #translation0{
+    width: 600px;
+    height: 300px;
+    resize: none;
+    border-radius: 10px;
+    padding: 9px 9px 9px 9px;
+    font-size: x-large;
+    font-family: sans-serif,monospace,arial;
+}
+
+.row_from{
+    float: left;
+    text-indent: 400px;
+}
+
+.exchange{
+    float: left;
+    text-indent: 140px;
+}
+
+.row_to{
+    float: left;
+    text-indent: 200px;
+}
+
+@media screen and (max-width:600px) {
+    #english0, #santali0{
+        width: 300px;
+        height: 100px;
+        resize: none;
+        border: solid;
+        border-radius: 10px;
+        padding: 9px 9px 9px 9px;
+        font-size: x-large;
+        font-family: sans-serif,monospace,arial;
+    }
+
+    #segment, #translation0{
+        width: 300px;
+        height: 100px;
+        resize: none;
+        border-radius: 10px;
+        padding: 9px 9px 9px 9px;
+        font-size: x-large;
+        font-family: sans-serif,monospace,arial;
+    }
+
+    .row_from{
+        float: left;
+        text-indent: 50px;
+    }
+    
+    .exchange{
+        float: left;
+        text-indent: 10px;
+    }
+    
+    .row_to{
+        float: left;
+        text-indent: 16px;
+    }
+
+    button{
+        margin: 1px 20px 1px 20px;
+    }
+        
 }
