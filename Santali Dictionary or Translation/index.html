@@ -19,33 +19,51 @@
 <h2>Search word/Translation</h2>
 <p id="p1">Please use any one of these tools at a time to avoid mass call.</p>
 
+
+<!-- <input type="button" value="Clear" onclick="javascript:eraseText();"> 
+    <textarea id='output2' rows=20 cols=90></textarea>
+
+<script>
+
+function eraseText() {
+    document.getElementById("output2").value = "";
+}
+</script> -->
+
+
 <p id="p2">mymemory</p>
 <div class="container">
     <div class="wrapper">
       <div class="text-input">
         <textarea spellcheck="false" id ="english0" class="from-text" placeholder="Enter text"></textarea>
-        <textarea spellcheck="false" id ="santali0"  class="to-text" placeholder="Translation"></textarea>
+        <textarea spellcheck="false" id ="santali0"  class="to-text" readonly placeholder="Translation"></textarea>
+      </div> 
+      <div class="controls">
+        <div class="row_from">
+          <!-- <div class="icons">
+            <i id="from"></i>
+            <i id="from"></i>
+          </div> -->
+          <select></select>
+        </div>
+        <div class="exchange"><i class="fas fa-exchange-alt">↔️</i></div>
+        <div class="row_to">
+          <select></select>
+          <!-- <div class="icons">
+            <i id="to" ></i>
+            <i id="to"></i>
+          </div> -->
+        </div>
       </div>
-      <ul class="controls">
-        <li class="row from">
-          <div class="icons">
-            <i id="from" class="fas fa-volume-up"></i>
-            <i id="from" class="fas fa-copy"></i>
-          </div>
-          <select></select>
-        </li>
-        <li class="exchange"><i class="fas fa-exchange-alt">↔️</i></li>
-        <li class="row to">
-          <select></select>
-          <div class="icons">
-            <i id="to" class="fas fa-volume-up"></i>
-            <i id="to" class="fas fa-copy"></i>
-          </div>
-        </li>
-      </ul>
     </div>
-    <button>Translate Text</button>
+    <br>
+    <br>
+    <button id="button01">Translate Text</button>
+    <button id="button55">Clear</button>
+    <br>
+    <br>
   </div>
+  
 
 <br>
 
@@ -53,9 +71,11 @@
 <!-- https://stackoverflow.com/questions/34128361/appending-form-input-value-to-action-url-as-path -->
 <!-- https://beta.apertium.org/apy -->
 <form id="Glosbe_form" method="GET" target="_blank"  _lpchecked="1" onsubmit="GlsobeFunction()">
-    <textarea type="text" id="segment" placeholder="source language" name="1">en</textarea>
+    <textarea type="text" id="segment0" placeholder="source language" name="1">en</textarea>
     <textarea type="text" id="translation" placeholder="target" name="2">sat</textarea>
   <textarea type="text" id="translation" name="input"/>Cow</textarea>
+  <br>
+  <br>
   <button type="submit" id="submit">Submit</button>
 </form>
 
@@ -65,16 +85,20 @@
 
 <p id="p4">OmegaWiki</p>
 <form method="GET" target="_blank" action="https://www.omegawiki.org/" _lpchecked="1">
-  <textarea type="text" id="segment" placeholder="source language" name="search">ᱩᱞ</textarea>
+  <textarea type="text" id="segment1" placeholder="source language" name="search">ᱩᱞ</textarea>
   <!-- <textarea type="text" id="translation" name="text"/>Your text</textarea> -->
+  <br>
+  <br>
   <button type="submit" id="submit">Submit</button>
 </form>
 
 
 <p id="p5">English Wiktionary</p>
 <form method="GET" target="_blank" action="https://en.wiktionary.org/" _lpchecked="1">
-  <textarea type="text" id="segment" placeholder="source language" name="search">ᱩᱞ</textarea>
+  <textarea type="text" id="segment2" placeholder="source language" name="search">ᱩᱞ</textarea>
   <!-- <textarea type="text" id="translation" name="text"/>Your text</textarea> -->
+  <br>
+  <br>
   <button type="submit" id="submit">Submit</button>
 </form>
 
@@ -82,8 +106,10 @@
 
 <p id="p6">Taking Dictionary</p>
 <form method="GET" target="_blank" action="https://talkingdictionary.swarthmore.edu/santali/" _lpchecked="1">
-  <textarea type="text" id="segment" placeholder="query" name="q">bar</textarea>
+  <textarea type="text" id="segment3" placeholder="query" name="q">bar</textarea>
   <!-- <textarea type="text" id="translation" name="text"/>Your text</textarea> -->
+  <br>
+  <br>
   <button type="submit" id="submit">Submit</button>
 </form>
 
@@ -93,8 +119,10 @@
 <p id="p7">Apertium</b> . Use with caution</p>
 <!-- https://beta.apertium.org/apy -->
 <form method="GET" target="_blank" action="https://beta.apertium.org/" _lpchecked="1">
-  <textarea type="text" id="segment" placeholder="source language and target" name="dir">eng-sat</textarea>
+  <textarea type="text" id="segment4" placeholder="source language and target" name="dir">eng-sat</textarea>
   <textarea type="text" id="translation" name="q"/>Cow</textarea>
+  <br>
+  <br>
   <button type="submit" id="submit">Submit</button>
 </form>
 
@@ -105,25 +133,31 @@
 
  <p id="p9">Google Translate</p>
   <form method="GET" target="_blank" action="https://translate.google.co.in/?" _lpchecked="1">
-    <textarea type="text" id="segment" placeholder="source language" name="sl">auto</textarea>
+    <textarea type="text" id="segment5" placeholder="source language" name="sl">auto</textarea>
     <textarea type="text" id="translation" placeholder="target" name="tl">hi</textarea>
     <textarea type="text" id="translation" name="text"/>Your text</textarea>
+    <br>
+    <br>
     <button type="submit" id="submit">Submit</button>
  </form>
 
  <p id="p10">Bing</p>
  <form method="GET" target="_blank" action="https://www.bing.com/translator" _lpchecked="1">
-   <textarea type="text" id="segment" placeholder="source language" name="sl">auto</textarea>
+   <textarea type="text" id="segment6" placeholder="source language" name="sl">auto</textarea>
    <textarea type="text" id="translation" placeholder="target" name="tl">hi</textarea>
    <textarea type="text" id="translation" name="text"/>Your text</textarea>
+   <br>
+   <br>
    <button type="submit" id="submit">Submit</button>
 </form>
 
 
 <p id="p11">yandex</p>
 <form method="GET" target="_blank" action="https://translate.yandex.com/" _lpchecked="1">
-  <textarea type="text" id="segment" placeholder="source language" name="lang">en-hi</textarea>
+  <textarea type="text" id="segment7" placeholder="source language" name="lang">en-hi</textarea>
   <textarea type="text" id="translation" name="text"/>Your text</textarea>
+  <br>
+  <br>
   <button type="submit" id="submit">Submit</button>
 </form>
 
@@ -135,10 +169,19 @@
 <p id="p13">(Public Contribution)After clicking on <b>submit</b> you will get a new tab with a messege <b>{"responseData":"OK","responseStatus":200,"responseDetails":[6409]}</b>, which means your submission is successful. Use with caution</p>
   <form method="GET" target="_blank" action="https://api.mymemory.translated.net/set?" _lpchecked="1">
     <textarea type="text" id="segment" placeholder="English" name="seg"></textarea>
-    <textarea type="text" id="translation" placeholder="ᱥᱟᱱᱛᱟᱲᱤ" name="tra"></textarea>
-    <textarea type="text" id="translation" readonly name="langpair"/>en-US|sat-IN</textarea>
+    <textarea type="text" id="translation0" placeholder="ᱥᱟᱱᱛᱟᱲᱤ" name="tra"></textarea>
+    <br>
+    <br>
+    <textarea type="text" id="translation1" name="langpair"/>en-US|sat-IN</textarea>
+    <br>
+    <br>
     <button type="submit" id="submit">Submit</button>
+    <br>
+    <br>
  </form>
+ <button id="button100">Clear</button>
+ <br>
+ <br>
 
 
 
@@ -160,12 +203,27 @@
  <script src="countries.js"></script>
  <script>
 
+function eraseTextUpper(){
+    console.log("functoin is running");
+    var a = document.getElementById("english0").value = "";
+    var b = document.getElementById("santali0").value = "";
+};
+document.getElementById("button55").addEventListener("click",eraseTextUpper);
+
+function eraseTextLower(){
+    console.log("functoin is running2");
+    var a = document.getElementById("segment").value = "";
+    var b = document.getElementById("translation0").value = "";
+};
+document.getElementById("button100").addEventListener("click",eraseTextLower);
+
+
 const fromText = document.querySelector(".from-text"),
 toText = document.querySelector(".to-text"),
 exchageIcon = document.querySelector(".exchange"),
 selectTag = document.querySelectorAll("select"),
 icons = document.querySelectorAll(".row i");
-translateBtn = document.querySelector("button"),
+translateBtn = document.getElementById("button01"),
 
 selectTag.forEach((tag, id) => {
  for (let country_code in countries) {
@@ -248,10 +306,4 @@ icons.forEach(icon => {
 </body>
 </html>
 
-
-<!-- https://api.mymemory.translated.net/set?seg=Hello World!&tra=Ciao Mondo!&langpair=en| -->
-//total 13 paragraph id present i.e 1 to 13
-
-
-Background photo (img.jpg) by Irina Iriser from Pexels:
-https://www.pexels.com/photo/close-up-photography-of-pink-flowers-1408221/
+<a href="https://commons.wikimedia.org/wiki/File:Mobilechallenge-4k-wallpaper-close-up-807598.jpg">Ms.umarayamajhi</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>, via Wikimedia Commons
