@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>English to Santali Translator</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1.0">
+  </head>
+  <body>
+  
+  <style>
+  
+  textarea[type=text] {
+  height: 80px;
+  width: 450px;
+  padding: 3px;
+  font-size: 15px;
+}
+  
+  </style>
+  
+  
+    <h1>English to Santali Translator</h1>
+    <label for="text-to-translate">Enter text to translate:</label><br />
+    <textarea type="text" id="text-to-translate" onPaste="setTimeout(translateText, 2000); setTimeout(func2, 5000)"></textarea><br />
+    <button onclick="translateText()">Translate</button><br />
+    <p>Translated text: <span id="translated-text"></span></p>
+	<button id="copyButton">Copy</button>
+
+<h1>Send Translation to MyMemory</h1>
+    <label for="text">Enter text:</label><br />
+    <textarea type="text" id="text" value="" ></textarea><br />
+    <label for="translation">Enter translation:</label><br />
+    <textarea type="text" id="translation" ></textarea><br />
+    <button onclick="sendTranslation()">Send Correction</button><br />
+	
+	
+
+    <script>
+      function translateText() {
+        // Get text from input
+        const text = document.getElementById("text-to-translate").value;
+
+        // Set MyMemory API parameters
+        const url = "https://api.mymemory.translated.net/get";
+        const params = new URLSearchParams({
+          q: text,
+          langpair: "en|sat",
+		  de: "prasantahembram720@gmail.com"
+        });
+
+        // Send request to MyMemory API
+        fetch(`${url}?${params}`)
+          .then(response => response.json())
+          .then(data => {
+            // Get translated text from response
+            const translatedText = data.responseData.translatedText;
+
+            // Update page with translated text
+            document.getElementById("translated-text").textContent = translatedText;
+          });
+      }
+    </script>
+	
+	<script>
+      function sendTranslation() {
+        // Get text and translation from inputs
+        const text = document.getElementById("text").value;
+        const translation = document.getElementById("translation").value;
+
+        // Set MyMemory API parameters
+        const url = "https://api.mymemory.translated.net/set";
+        const params = new URLSearchParams({
+          seg: text,
+		  de: "prasantahembram720@gmail.com",
+          tra: translation,
+          langpair: "en|sat"
+        });
+
+        // Send request to MyMemory API
+        fetch(`${url}?${params}`, { method: "GET" })
+          .then(response => response.json())
+          .then(data => {
+            console.log(data);
+          });
+		  
+      }
+    </script>
+	
+	<script>
+	function transferText(){
+		const textToTranslate = document.getElementById("text-to-translate").value;
+		document.getElementById("text").value = textToTranslate;
+	}
+	
+	function transferText2(){
+		const textToTranslate2 = document.getElementById("translated-text").innerHTML;
+		document.getElementById("translation").value = textToTranslate2;
+	}
+	
+	function func2() {
+		transferText();
+		transferText2();
+	}
+
+	</script>
+	
+	<script>
+	
+	//copy button
+	
+	const copyButton = document.getElementById("copyButton");
+
+copyButton.addEventListener("click", () => {
+  const innerHTML = document.getElementById("translated-text").innerHTML;
+  navigator.clipboard.writeText(innerHTML).then(() => {
+    console.log("Text copied to clipboard");
+  }, () => {
+    console.log("Failed to copy text to clipboard");
+  });
+});
+	</script>
+	
+	
+	
+  </body>
+</html>
