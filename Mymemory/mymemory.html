@@ -86,6 +86,7 @@
     </script>
 	
 	<script>
+	
 	function transferText(){
 		const textToTranslate = document.getElementById("text-to-translate").value;
 		document.getElementById("text").value = textToTranslate;
@@ -98,7 +99,7 @@
 	
 	function func2() {
 		transferText();
-		transferText2();
+		transferText2()
 	}
 
 	</script>
@@ -119,6 +120,22 @@ copyButton.addEventListener("click", () => {
 });
 	</script>
 	
+	<script>
+	// Automatic Translate the text while typing with delay.
+	
+const inText = document.getElementById('text-to-translate')
+const delay = 2000
+
+let timer
+inText.addEventListener('input', code => {
+  clearTimeout(timer);
+  timer = setTimeout(x => {
+    translateText(); func2()
+  }, delay, code)
+})
+	
+	
+	</script>
 	
 	
   </body>
